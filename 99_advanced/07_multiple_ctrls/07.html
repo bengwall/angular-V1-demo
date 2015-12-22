@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+</head>
+<body>
+
+<div ng-app="app" ng-controller="AppCtrl as app">
+    <h1>App message: {{app.message}}</h1>
+    <hr/>
+    <div ng-controller="AdminCtrl as admin">
+        <h2>Admin message: {{admin.message}}</h2>
+
+        <h2>App message: {{app.message}}</h2>
+    </div>
+
+    <hr/>
+    <div ng-controller="DashboardCtrl as dash">
+        <h2>Dashboard message: {{dash.message}}</h2>
+
+        <h2>App message: {{app.message}}</h2>
+    </div>
+
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="07.js"></script>
+</body>
+</html>

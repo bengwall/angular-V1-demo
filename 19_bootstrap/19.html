@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+</head>
+<body>
+<div ng-app="one" style="width: 300px">
+
+
+    <div ng-controller="AccordionDemoCtrl as acc">
+        <label class="checkbox">
+            <input type="checkbox" ng-model="acc.oneAtATime">
+            Open only one at a time
+        </label>
+
+        <accordion close-others="acc.oneAtATime">
+            <accordion-group heading="Static Header, initially expanded" is-open="true">
+                This content is straight in the template.
+            </accordion-group>
+            <accordion-group heading="{{group.title}}" ng-repeat="group in acc.groups">
+                {{group.content}}
+            </accordion-group>
+            <accordion-group heading="Dynamic Body Content">
+                <p>The body of the accordion group grows to fit the contents</p>
+                <button class="btn btn-default btn-sm" ng-click="acc.addItem()">Add Item</button>
+                <div ng-repeat="item in acc.items">{{item}}</div>
+            </accordion-group>
+            <accordion-group is-open="isopen">
+                <accordion-heading>
+                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+                </accordion-heading>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </accordion>
+    </div>
+
+</div>
+
+
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="19.js"></script>
+</body>
+</html>

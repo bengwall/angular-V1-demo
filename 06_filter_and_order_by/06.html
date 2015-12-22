@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+</head>
+<body>
+
+<div ng-app="app" ng-controller="AppCtrl as app">
+    <fieldset><label>Filter</label>
+        <input type="text" ng-model="input.name"/>
+    </fieldset>
+    <table class="table">
+        <thead>
+        <tr>
+            <th ng-click="app.setOrderField('firstName')">First Name</th>
+            <th ng-click="app.setOrderField('lastName')">Last Name</th>
+            <th ng-click="app.setOrderField('email')">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in app.people|filter:input.name|orderBy:app.orderField">
+            <td>{{person.firstName}}</td>
+            <td>{{person.lastName}}</td>
+            <td>{{person.email}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="https://rawgit.com/nnnick/Chart.js/master/Chart.min.js"></script>
+<script src="https://rawgit.com/jtblin/angular-chart.js/master/dist/angular-chart.min.js"></script>
+<script src="06.js"></script>
+</body>
+</html>

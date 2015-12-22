@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+        <link rel="stylesheet" href="../bower_components/angular-chart.js/dist/angular-chart.css" />
+        <link rel="stylesheet" href="../custom.css"/>
+    </head>
+    <body ng-app="app" ng-cloak ng-controller="MainController">
+        <div class="container">
+            <div class="row"><h3>Angular Chart.js Example</h3><br></div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <form class="form-horizontal">
+                        <div class="form-group" ng-repeat="label in chart.labels">
+                            <label class="col-sm-6 control-label">{{::label}}</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" ng-model="chart.data[0][$index]">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-radar" chart-data="chart.data" chart-labels="chart.labels" chart-legend="chart.legend" chart-series="chart.series"></canvas>
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-line" chart-data="chart.data" chart-labels="chart.labels" chart-legend="{{chart.legend}}" chart-series="chart.series"></canvas>
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-bar" chart-data="chart.data" chart-labels="chart.labels" chart-legend="chart.legend" chart-series="chart.series"></canvas>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-pie" chart-data="chart.data[0]" chart-labels="chart.labels" chart-legend="chart.legend"></canvas>
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-polar-area" chart-data="chart.data[0]" chart-labels="chart.labels" chart-legend="chart.legend"></canvas>
+                </div>
+                <div class="col-xs-3">
+                    <canvas class="chart chart-doughnut" chart-data="chart.data[0]" chart-labels="chart.labels" chart-legend="chart.legend"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/Chart.js/Chart.min.js"></script>
+        <script src="../bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+        <script src="08.js"></script>
+    </body>
+</html>

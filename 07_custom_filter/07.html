@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../custom.css"/>
+</head>
+<body ng-app="app">
+
+<div ng-cloak>
+    <h2>I visited {{1 | afPluralizeFilter:'city'}}</h2> <!-- I visited 1 city-->
+    <h2>I visited {{3 | afPluralizeFilter:'city'}}</h2> <!-- I visited 3 cities-->
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="09.js"></script>
+<script src="af-pluralize-filter.js"></script>
+</body>
+</html>

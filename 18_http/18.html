@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
+</head>
+<body>
+
+<div ng-app="app" ng-controller="AppCtrl as app">
+    <table class="table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="repo in app.repos">
+            <td>{{repo.name}}</td>
+            <td><a ng-href="{{repo.html_url}}">{{repo.html_url}}</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="../bower_components/angular/angular.js"></script>
+<script src="18.js"></script>
+</body>
+</html>
