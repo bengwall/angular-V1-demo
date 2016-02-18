@@ -2,10 +2,10 @@ angular.module("demo",[])
 
 .controller("AppCtrl", function () {
     var app = this;
-    //app.people = ["Jay", "Wally", "Barry"];
+    //app.people = ["Marc", "Jeff", "Selvi"];
     app.people = [
-        {name:"Jay", age:30},
-        {name:"Wally", age:20},
-        {name:"Barry", age:10}
+        {name:"Marc", age:30},
+        {name:"Jeff", age:20},
+        {name:"Selvi", age:10}
     ]
 });

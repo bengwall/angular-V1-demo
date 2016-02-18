@@ -2,10 +2,10 @@ angular.module("demo", [])
 
 .controller("AppCtrl", function () {
     var app = this;
-    app.message = "Hello";
-    app.savedMessage = "";
+    app.userName = "Megan";
+    app.savedUserName = "";
 
-    app.saveMessage = function () {
-        app.savedMessage = app.message;
+    app.handleSave = function () {
+        app.handleSave = app.userName;
     }
 });

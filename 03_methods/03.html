@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
-</head>
-<body>
+	<head>
+		<title></title>
+	</head>
+	<body>
 
-<div ng-app="demo" ng-controller="AppCtrl as app">
-    <input type="text" ng-model="app.message"/>
-    <h2>{{app.savedMessage}}</h2>
-    <button ng-click="app.saveMessage(app.message)">Save</button>
-</div>
+		<div ng-app="demo" ng-controller="AppCtrl as app">
+			<input type="text" ng-model="app.userName"/>
 
-<script src="../bower_components/angular/angular.js"></script>
-<script src="03.js"></script>
-</body>
+			<h2>{{app.handleSave}}</h2>
+			<button ng-click="app.handleSave(app.userName)">Save</button>
+		</div>
+
+		<script src="../bower_components/angular/angular.js"></script>
+		<script src="03.js"></script>
+	</body>
 </html>

@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css"/>
-</head>
-<body>
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-<div ng-app="demo" ng-controller="AppCtrl as app">
+        <div ng-app="demo" ng-controller="AppCtrl as app">
 
-    <div ng-repeat="person in app.people">
-        {{person.name}}, {{person.age}}
-    </div>
+            <div ng-repeat="person in app.people">
+                {{person.name}}, {{person.age}}
+            </div>
 
-</div>
+        </div>
 
-<script src="../bower_components/angular/angular.js"></script>
-<script src="04.js"></script>
-</body>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="04.js"></script>
+    </body>
 </html>

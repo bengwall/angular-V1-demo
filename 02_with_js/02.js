@@ -3,6 +3,6 @@ angular.module("demo", [])
 .controller("AppCtrl", function () {
     var app = this;
 
-    app.message = "Hello";
+    app.userName = "Megan";
 });
 

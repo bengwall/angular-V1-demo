@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-</head>
-<body>
+    <head>
+        <title></title>
+    </head>
+    <body>
 
-<div ng-app="demo" ng-controller="AppCtrl as app">
-    <input type="text" ng-model="app.one"/>
-    <input type="text" ng-model="app.two"/>
-    <h2>{{app.one + app.two}}</h2>
-</div>
+        <div ng-app="" ng-init="data.userName = 'Megan'">
+            This is your name: <input type="text" ng-model="data.message"/>
+            <h2>Hello {{data.message}}!</h2>
+        </div>
 
-<script src="../bower_components/angular/angular.js"></script>
-<script src="02.js"></script>
-</body>
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="02.js"></script>
+    </body>
 </html>
